@@ -1,12 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+:root {
+    --color-primary: #258a4a;
+    --color-dark: #222222;
+    --color-light: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--color-dark);
 }
 
 h1, h2, h3 {
     font-family: 'Madimi One', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Madimi One', sans-serif;
+    font-size: 30px;
+    color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.navbar ul li a:hover {
+    color: var(--color-primary);
+}
+
+
+@media screen and (max-width: 959px) {
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .menu-toggle i {
+        color: var(--color-primary);
+        font-size: 26px;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar.open {
+        display: block;
+        background-color: var(--color-primary);
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .navbar ul li a {
+        color: var(--color-dark);
+    }
+
+    .navbar ul li a:hover {
+        color: var(--color-light);
+        
+    }
 }
