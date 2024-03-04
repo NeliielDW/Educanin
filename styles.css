@@ -139,3 +139,34 @@ header {
 .banner button:hover {
     transform: scale(1.1);
 }
+
+
+
+/* ABOUT US */
+.about {
+    padding: 50px 100px;
+    display: flex;
+    gap: 100px;
+}
+
+.about_img img {
+    border-radius: 60%;
+    width: 500px;
+}
+
+.about_txt {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+
+}
+.about_txt h2 {
+    font-size: 36px;
+    color: var(--color-primary);
+}
+
+.about_txt p {
+    text-align: justify;
+    line-height: 40px;
+}
